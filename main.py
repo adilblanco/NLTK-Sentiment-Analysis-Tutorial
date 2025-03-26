@@ -40,7 +40,8 @@ from nltk.tokenize import word_tokenize
 
 sample_text = "NLTK is a powerful library for NLP."
 tokens = word_tokenize(sample_text)
-print(f"Step 3 - Tokenization :\n {tokens}\n___")
+print("Step (3) - Tokenization :")
+print(tokens)
 
 # **Step 4**: Removing Stopwords
 # Stopwords are common words that do not carry significant meaning and can be removed from the text. NLTK has a built-in list of stopwords:
@@ -52,7 +53,8 @@ def remove_stopwords(tokens):
     return [word for word in tokens if word.lower() not in stop_words]
 
 filtered_tokens = remove_stopwords(tokens)
-print(f"Step 4 - Removing Stopwords :\n {filtered_tokens}\n___")
+print("Step (4) - Removing Stopwords :")
+print(filtered_tokens)
 
 # **Step 5**: Stemming and Lemmatization
 # Stemming and lemmatization are techniques for reducing words to their root forms. NLTK provides tools for both:
@@ -64,8 +66,10 @@ lemmatizer = WordNetLemmatizer()
 
 stemmed_tokens = [stemmer.stem(word) for word in filtered_tokens]
 lemmatized_tokens = [lemmatizer.lemmatize(word) for word in filtered_tokens]
-print(f"Step 5 - Stemming :\n {stemmed_tokens}\n___")
-print(f"Step 5 - Lemmatization :\n {lemmatized_tokens}\n___")
+print("Step (5) - Stemming :")
+print(stemmed_tokens)
+print("Step (5) - Lemmatization :")
+print(lemmatized_tokens)
 
 # **Step 6**: Feature Extraction
 # We need to convert our text data into a format suitable for machine learning algorithms. One common approach is to use a bag-of-words model:
